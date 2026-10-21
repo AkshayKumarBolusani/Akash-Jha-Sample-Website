@@ -129,6 +129,24 @@ section{padding:6.5rem 0}
 .count .ctas{display:flex;flex-wrap:wrap;gap:.9rem}
 #cd-state{font-family:var(--font-d);text-transform:uppercase;font-size:clamp(2rem,6vw,4rem);line-height:1.05;margin:2.4rem 0 1rem;display:none}
 
+/* transformations */
+.trans{background:#0c0c0c;border-top:1px solid var(--line)}
+.trans h2{font-size:clamp(2.6rem,7vw,5.2rem);margin-top:1rem}
+.trans .lead{color:#cfccc4;max-width:38rem;margin-top:1.1rem}
+.tgrid{display:grid;grid-template-columns:1fr 1fr;gap:1.6rem;margin-top:3rem}
+.tcard{border:1px solid var(--line);background:#101010}
+.tpair{display:grid;grid-template-columns:1fr 1fr}
+.timg{position:relative;aspect-ratio:4/5;overflow:hidden}
+.timg img{width:100%;height:100%;object-fit:cover;object-position:center top;filter:saturate(.85) contrast(1.02);display:block}
+.ttag{position:absolute;top:.6rem;left:.6rem;font-family:var(--font-m);font-size:.62rem;letter-spacing:.18em;background:rgba(10,10,10,.78);color:var(--paper);padding:.35rem .6rem;text-transform:uppercase}
+.tmeta{padding:1.2rem 1.3rem 1.4rem;border-top:1px solid var(--line)}
+.tindex{font-family:var(--font-m);font-size:.62rem;letter-spacing:.2em;color:var(--paper-dim);margin:0 0 .6rem}
+.tname{font-family:var(--font-m);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--paper)}
+.ttime{font-family:var(--font-m);font-size:.72rem;letter-spacing:.14em;color:var(--accent);margin-left:.9rem}
+.tquote{color:var(--paper-dim);font-size:.95rem;margin:.7rem 0 0;line-height:1.55}
+.tcta{margin-top:2.8rem}
+@media(max-width:760px){.tgrid{grid-template-columns:1fr}}
+
 /* coaching */
 .offers{border-top:1px solid var(--line)}
 .offer{display:grid;gap:.7rem;padding:2.4rem 0;border-bottom:1px solid var(--line);text-decoration:none}
@@ -306,11 +324,77 @@ footer{border-top:1px solid var(--line);padding:3rem 0 2.4rem}
   </div>
 </section>
 
+<!-- TRANSFORMATIONS -->
+<section class="trans" id="transformations">
+  <div class="wrap">
+    <p class="eyebrow">04 · Transformations</p>
+    <h2>Before.<br>After.</h2>
+    <p class="lead">Real clients, real months. Exactly as it happened, from Akash's own training floor.</p>
+    <div class="tgrid"><article class="tcard reveal">
+  <div class="tpair">
+    <div class="timg"><img src="img/t-damini_a-before.jpg" alt="client before photo" loading="lazy"><span class="ttag">Before</span></div>
+    <div class="timg"><img src="img/t-damini_a-after.jpg" alt="client after photo" loading="lazy"><span class="ttag">After</span></div>
+  </div>
+  <div class="tmeta"><p class="tindex">T.01</p><span class="tname">Damini Naini</span><span class="ttime">2 months</span><p class="tquote">&ldquo;Thank you @akash___jhaa, you are the best.&rdquo;</p></div>
+</article>
+<article class="tcard reveal">
+  <div class="tpair">
+    <div class="timg"><img src="img/t-bhanni-before.jpg" alt="client before photo" loading="lazy"><span class="ttag">Before</span></div>
+    <div class="timg"><img src="img/t-bhanni-after.jpg" alt="client after photo" loading="lazy"><span class="ttag">After</span></div>
+  </div>
+  <div class="tmeta"><p class="tindex">T.02</p><span class="tname">Bhanni Reddy</span><span class="ttime">90 days</span><p class="tquote">&ldquo;The body achieves what your mind believes.&rdquo;</p></div>
+</article>
+<article class="tcard reveal">
+  <div class="tpair">
+    <div class="timg"><img src="img/t-man_red-before.jpg" alt="client before photo" loading="lazy"><span class="ttag">Before</span></div>
+    <div class="timg"><img src="img/t-man_red-after.jpg" alt="client after photo" loading="lazy"><span class="ttag">After</span></div>
+  </div>
+  <div class="tmeta"><p class="tindex">T.03</p><span class="tname">Client transformation</span><p class="tquote">&ldquo;Don't compare yourself to others. Focus on your own growth and improvement.&rdquo;</p></div>
+</article>
+<article class="tcard reveal">
+  <div class="tpair">
+    <div class="timg"><img src="img/t-thinman-before.jpg" alt="client before photo" loading="lazy"><span class="ttag">Before</span></div>
+    <div class="timg"><img src="img/t-thinman-after.jpg" alt="client after photo" loading="lazy"><span class="ttag">After</span></div>
+  </div>
+  <div class="tmeta"><p class="tindex">T.04</p><span class="tname">Client transformation</span><p class="tquote">&ldquo;Believe in yourself, and you will be unstoppable.&rdquo;</p></div>
+</article>
+<article class="tcard reveal">
+  <div class="tpair">
+    <div class="timg"><img src="img/t-woman_ba-before.jpg" alt="client before photo" loading="lazy"><span class="ttag">Before</span></div>
+    <div class="timg"><img src="img/t-woman_ba-after.jpg" alt="client after photo" loading="lazy"><span class="ttag">After</span></div>
+  </div>
+  <div class="tmeta"><p class="tindex">T.05</p><span class="tname">Client transformation</span></div>
+</article>
+<article class="tcard reveal">
+  <div class="tpair">
+    <div class="timg"><img src="img/t-flex-before.jpg" alt="client before photo" loading="lazy"><span class="ttag">Before</span></div>
+    <div class="timg"><img src="img/t-flex-after.jpg" alt="client after photo" loading="lazy"><span class="ttag">After</span></div>
+  </div>
+  <div class="tmeta"><p class="tindex">T.06</p><span class="tname">Client transformation</span><p class="tquote">&ldquo;Discipline is the bridge between goals and accomplishments.&rdquo;</p></div>
+</article>
+<article class="tcard reveal">
+  <div class="tpair">
+    <div class="timg"><img src="img/t-pinktop-before.jpg" alt="client before photo" loading="lazy"><span class="ttag">Before</span></div>
+    <div class="timg"><img src="img/t-pinktop-after.jpg" alt="client after photo" loading="lazy"><span class="ttag">After</span></div>
+  </div>
+  <div class="tmeta"><p class="tindex">T.07</p><span class="tname">Client transformation</span></div>
+</article>
+<article class="tcard reveal">
+  <div class="tpair">
+    <div class="timg"><img src="img/t-sweat-before.jpg" alt="client before photo" loading="lazy"><span class="ttag">Before</span></div>
+    <div class="timg"><img src="img/t-sweat-after.jpg" alt="client after photo" loading="lazy"><span class="ttag">After</span></div>
+  </div>
+  <div class="tmeta"><p class="tindex">T.08</p><span class="tname">Client transformation</span><p class="tquote">&ldquo;Sweat now, shine later.&rdquo;</p></div>
+</article></div>
+    <div class="tcta"><a class="btn btn-primary" href="https://wa.me/916309494878?text=Hi%20Akash%2C%20I%20want%20to%20start%20my%20transformation%20journey%20with%20you.%20Please%20share%20the%20details." target="_blank" rel="noopener">Start your transformation</a></div>
+  </div>
+</section>
+
 <!-- COACHING -->
 <section id="coaching">
   <div class="wrap">
     <div class="sec-head">
-      <div><p class="eyebrow">04 · Coaching</p><h2>Pick your<br>starting point.</h2></div>
+      <div><p class="eyebrow">05 · Coaching</p><h2>Pick your<br>starting point.</h2></div>
       <span class="sec-num">NO PRICES HERE · ASK ON WHATSAPP</span>
     </div>
     <div class="offers">
@@ -333,7 +417,7 @@ footer{border-top:1px solid var(--line);padding:3rem 0 2.4rem}
 <!-- PROCESS -->
 <section class="process">
   <div class="wrap">
-    <p class="eyebrow">05 · How it works</p>
+    <p class="eyebrow">06 · How it works</p>
     <div class="steps">
       <div class="step rv"><div class="n">STEP 01</div><h3>Say hello</h3><p>One WhatsApp message. Tell Akash where you are starting from.</p></div>
       <div class="step rv"><div class="n">STEP 02</div><h3>Map the goal</h3><p>A short conversation about your body, schedule, food and target date.</p></div>
@@ -347,7 +431,7 @@ footer{border-top:1px solid var(--line);padding:3rem 0 2.4rem}
 <section id="faq">
   <div class="wrap">
     <div class="sec-head">
-      <div><p class="eyebrow">06 · Questions</p><h2>Before you ask.</h2></div>
+      <div><p class="eyebrow">07 · Questions</p><h2>Before you ask.</h2></div>
       <span class="sec-num">FAQ</span>
     </div>
     <div class="faq-list">
