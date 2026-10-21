@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Akash Jha · Personal Fitness Trainer in Hyderabad | The Coach Akash</title>
+<meta name="description" content="Akash Jha is a personal fitness trainer and competing bodybuilding athlete in Hyderabad. 1-on-1 personal training, transformation coaching and online coaching. Start on WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0c0c0d; --ink2:#131315; --paper:#f4f2ed; --paper-dim:#a9a69e;
+  --line:rgba(244,242,237,.16); --line-dark:rgba(12,12,13,.14);
+  --accent:#ff4d00; --wa:#22c05e;
+  --font-d:'Anton',sans-serif; --font-b:'Inter',sans-serif; --font-m:'Space Mono',monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--paper);font-family:var(--font-b);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:60;opacity:.05;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E")}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{width:min(100% - 3rem,1240px);margin-inline:auto}
+.mono{font-family:var(--font-m);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase}
+.eyebrow{font-family:var(--font-m);font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);display:flex;align-items:center;gap:.75rem}
+.eyebrow::before{content:"";width:2.2rem;height:1px;background:var(--accent)}
+h1,h2{font-family:var(--font-d);font-weight:400;text-transform:uppercase;line-height:.95;letter-spacing:.005em}
+.btn{display:inline-flex;align-items:center;gap:.6rem;font-weight:600;font-size:.95rem;text-decoration:none;
+  padding:1rem 1.7rem;border-radius:999px;transition:transform .25s ease,background .25s ease,color .25s ease;min-height:52px}
+.btn svg{width:19px;height:19px;flex:none}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover{background:#ff5e1f;transform:translateY(-2px)}
+.btn-ghost{border:1px solid var(--line);color:var(--paper)}
+.btn-ghost:hover{border-color:var(--paper);transform:translateY(-2px)}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+
+/* ---------- header ---------- */
+header{position:fixed;inset:0 0 auto 0;z-index:50;transition:background .3s ease,border-color .3s ease;border-bottom:1px solid transparent}
+header.scrolled{background:rgba(12,12,13,.88);backdrop-filter:blur(10px);border-color:var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{font-family:var(--font-d);font-size:1.25rem;letter-spacing:.06em;text-decoration:none;text-transform:uppercase}
+.logo span{color:var(--accent)}
+.nav-links{display:none;gap:2.2rem}
+.nav-links a{font-family:var(--font-m);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;color:var(--paper-dim)}
+.nav-links a:hover{color:var(--paper)}
+.nav .btn{padding:.65rem 1.3rem;min-height:44px;font-size:.85rem}
+@media(min-width:860px){.nav-links{display:flex}}
+
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 22%;filter:grayscale(1) contrast(1.06)}
+.hero-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,12,13,.45) 0%,rgba(12,12,13,.05) 34%,rgba(12,12,13,.62) 72%,var(--ink) 100%)}
+.hero-inner{position:relative;z-index:2;width:100%;padding:8.5rem 0 3.2rem}
+.hero-meta{display:flex;flex-wrap:wrap;gap:.6rem 2.4rem;color:var(--paper-dim);margin-bottom:1.6rem}
+.hero-meta b{color:var(--paper);font-weight:400}
+.hero h1{font-size:clamp(4.2rem,15.5vw,12.5rem);color:var(--paper)}
+.hero h1 .thin{display:block;color:transparent;-webkit-text-stroke:2px var(--paper)}
+.hero-quote{max-width:34rem;margin-top:1.4rem;font-size:1.13rem;color:#e8e5de}
+.hero-quote em{font-style:italic}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:.9rem;margin-top:2.1rem}
+.hero-tag{position:absolute;top:96px;right:0;z-index:2;background:var(--accent);color:#fff;
+  font-family:var(--font-m);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;padding:.55rem 1rem}
+
+/* ---------- ticker ---------- */
+.ticker{border-block:1px solid var(--line);padding:.95rem 0;overflow:hidden;background:var(--ink)}
+.ticker-track{display:flex;gap:3.2rem;width:max-content;animation:tick 26s linear infinite;font-family:var(--font-d);
+  text-transform:uppercase;font-size:1.05rem;letter-spacing:.14em;color:var(--paper-dim);white-space:nowrap}
+.ticker-track i{font-style:normal;color:var(--accent)}
+@keyframes tick{to{transform:translateX(-50%)}}
+
+/* ---------- stats ---------- */
+/* PLACEHOLDER NUMBERS: swap with Akash's real figures (120+ / 5+ / 1000+ / 5.5K) */
+.stats{background:var(--paper);color:var(--ink)}
+.stats-grid{display:grid;grid-template-columns:repeat(2,1fr);}
+.stat{padding:2.4rem 1.6rem 2.2rem;border-left:1px solid var(--line-dark)}
+.stat:first-child{border-left:none}
+.stat .num{font-family:var(--font-d);font-size:clamp(2.6rem,5.5vw,4.2rem);line-height:1}
+.stat .num sup{color:var(--accent);font-size:.55em}
+.stat .lbl{font-family:var(--font-m);font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:#5c5a55;margin-top:.55rem}
+@media(min-width:860px){.stats-grid{grid-template-columns:repeat(4,1fr)}}
+@media(max-width:859px){.stat:nth-child(3){border-left:none}.stat{border-top:1px solid var(--line-dark)}.stat:nth-child(-n+2){border-top:none}}
+
+/* ---------- sections ---------- */
+section{padding:6.5rem 0}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;margin-bottom:3.2rem}
+.sec-head h2{font-size:clamp(2.4rem,6vw,4.4rem);margin-top:1rem}
+.sec-num{font-family:var(--font-m);color:var(--paper-dim);font-size:.75rem;letter-spacing:.2em}
+
+/* about */
+.about{background:var(--ink)}
+.about-grid{display:grid;gap:3rem}
+@media(min-width:920px){.about-grid{grid-template-columns:5fr 6fr;gap:5rem;align-items:center}}
+.about-img{position:relative}
+.about-img img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:center 20%;filter:grayscale(1) contrast(1.05);border-radius:4px}
+.about-img figcaption{position:absolute;left:1rem;bottom:1rem;background:var(--ink);color:var(--paper);
+  font-family:var(--font-m);font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;padding:.5rem .8rem}
+.about h2{font-size:clamp(2.4rem,5.5vw,4.2rem);margin:1rem 0 1.4rem}
+.about p{color:#cfccc4;max-width:36rem;margin-bottom:1.1rem}
+.about p strong{color:var(--paper);font-weight:600}
+.about blockquote{border-left:3px solid var(--accent);padding-left:1.2rem;margin:1.8rem 0;font-size:1.25rem;font-style:italic;color:var(--paper)}
+.about .cred{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.6rem}
+.about .cred span{border:1px solid var(--line);border-radius:999px;padding:.45rem 1rem;font-family:var(--font-m);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--paper-dim)}
+
+/* gallery */
+.work{background:var(--ink2)}
+.gal{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.gal figure{position:relative;overflow:hidden;border-radius:4px}
+.gal img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.05);transition:transform .7s cubic-bezier(.2,.6,.2,1)}
+.gal figure:hover img{transform:scale(1.045)}
+.gal .tall{aspect-ratio:3/4}.gal .sq{aspect-ratio:1/1}.gal .wide{aspect-ratio:16/10;grid-column:span 2}
+.gal figcaption{position:absolute;inset:auto 0 0 0;padding:2.4rem 1.1rem .95rem;display:flex;justify-content:space-between;align-items:flex-end;gap:1rem;
+  background:linear-gradient(180deg,transparent,rgba(12,12,13,.88));font-size:.92rem}
+.gal figcaption .q{font-style:italic;color:#eceade;max-width:26rem}
+.gal figcaption a{font-family:var(--font-m);font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);text-decoration:none;white-space:nowrap}
+@media(max-width:640px){.gal{grid-template-columns:1fr}.gal .wide{grid-column:span 1;aspect-ratio:4/3}}
+
+
+/* countdown */
+.count{background:var(--ink);border-block:1px solid var(--line);text-align:left}
+.count h2{font-size:clamp(2.6rem,7vw,5.2rem);margin-top:1rem}
+.count .lead{color:#cfccc4;max-width:38rem;margin-top:1.1rem}
+.count .lead strong{color:var(--paper)}
+.cd{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin:3rem 0 2.6rem;max-width:56rem}
+.cd .cell{border-top:3px solid var(--accent);padding-top:1rem}
+.cd .v{font-family:var(--font-d);font-size:clamp(2.8rem,9vw,6.2rem);line-height:1;font-variant-numeric:tabular-nums}
+.cd .k{font-family:var(--font-m);font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--paper-dim);margin-top:.5rem}
+.count .ctas{display:flex;flex-wrap:wrap;gap:.9rem}
+#cd-state{font-family:var(--font-d);text-transform:uppercase;font-size:clamp(2rem,6vw,4rem);line-height:1.05;margin:2.4rem 0 1rem;display:none}
+
+/* coaching */
+.offers{border-top:1px solid var(--line)}
+.offer{display:grid;gap:.7rem;padding:2.4rem 0;border-bottom:1px solid var(--line);text-decoration:none}
+@media(min-width:860px){.offer{grid-template-columns:110px 1fr 1.4fr auto;align-items:center;gap:2rem}}
+.offer .no{font-family:var(--font-d);font-size:2rem;color:transparent;-webkit-text-stroke:1.5px var(--paper-dim)}
+.offer h3{font-family:var(--font-d);font-weight:400;text-transform:uppercase;font-size:clamp(1.5rem,3.4vw,2.3rem);line-height:1.05}
+.offer p{color:var(--paper-dim);max-width:30rem}
+.offer .go{font-family:var(--font-m);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);display:inline-flex;gap:.5rem;align-items:center}
+.offer:hover h3{color:var(--accent)}
+.offer:hover .no{-webkit-text-stroke-color:var(--accent)}
+
+/* process */
+.process{background:var(--paper);color:var(--ink)}
+.process .eyebrow{color:var(--accent)}
+.steps{display:grid;gap:0;margin-top:1rem}
+@media(min-width:860px){.steps{grid-template-columns:repeat(4,1fr)}}
+.step{padding:1.8rem 1.6rem 1.8rem 0;border-top:3px solid var(--ink);margin-right:1.6rem}
+.step .n{font-family:var(--font-m);font-size:.72rem;letter-spacing:.18em;color:var(--accent);font-weight:700}
+.step h3{font-family:var(--font-d);font-weight:400;text-transform:uppercase;font-size:1.35rem;margin:.7rem 0 .5rem;line-height:1.1}
+.step p{color:#4c4a45;font-size:.95rem}
+
+/* faq */
+.faq-list{border-top:1px solid var(--line)}
+details{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:1.5rem;
+  padding:1.5rem 0;font-weight:600;font-size:1.05rem}
+summary::-webkit-details-marker{display:none}
+summary .plus{font-family:var(--font-d);color:var(--accent);font-size:1.5rem;line-height:1;transition:transform .3s ease}
+details[open ] .plus{transform:rotate(45deg)}
+details p{color:var(--paper-dim);padding:0 0 1.6rem;max-width:44rem}
+
+/* final cta */
+.final{position:relative;padding:9rem 0;overflow:hidden;text-align:left}
+.final img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 26%;filter:grayscale(1) contrast(1.06)}
+.final .shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(12,12,13,.93) 22%,rgba(12,12,13,.45) 62%,rgba(12,12,13,.25))}
+.final .wrap{position:relative;z-index:2}
+.final h2{font-size:clamp(3rem,10vw,7.5rem)}
+.final p{max-width:30rem;color:#e3e0d8;margin:1.2rem 0 2.2rem;font-size:1.1rem}
+
+/* footer */
+footer{border-top:1px solid var(--line);padding:3rem 0 2.4rem}
+.foot{display:flex;flex-wrap:wrap;gap:1.6rem;justify-content:space-between;align-items:center}
+.foot .links{display:flex;gap:1.8rem;font-family:var(--font-m);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase}
+.foot .links a{color:var(--paper-dim);text-decoration:none}
+.foot .links a:hover{color:var(--paper)}
+.credit{margin-top:2.2rem;color:#6d6b64;font-size:.8rem;font-family:var(--font-m);letter-spacing:.06em}
+.credit a{color:var(--paper-dim)}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.6,.2,1)}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .rv{opacity:1;transform:none;transition:none}
+  .ticker-track{animation:none}
+  .gal img{transition:none}
+}
+</style>
+</head>
+<body>
+
+<header id="hdr">
+  <div class="wrap nav">
+    <a class="logo" href="#top">Akash<span>.</span>Jha</a>
+    <nav class="nav-links">
+      <a href="#standard">The Standard</a>
+      <a href="#work">The Work</a>
+      <a href="#coaching">Coaching</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="btn btn-primary" href="https://wa.me/916309494878?text=Hi%20Akash%2C%20I%20saw%20your%20website%20and%20I%20want%20to%20start%20coaching%20with%20you." target="_blank" rel="noopener">WhatsApp Me</a>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<div class="hero">
+  <img class="hero-img" src="img/Dc9cmDCTRgR.jpg" alt="Akash Jha on stage at a bodybuilding competition, head bowed before his moment" fetchpriority="high">
+  <div class="hero-shade"></div>
+  <div class="hero-tag">Peak Week · Competing 25 Oct</div>
+  <div class="wrap hero-inner">
+    <div class="hero-meta mono">
+      <span><b>Personal Trainer</b></span><span>Hyderabad, India</span><span>Athlete · Guardian GNC</span>
+    </div>
+    <h1>Akash<span class="thin">Jha</span></h1>
+    <p class="hero-quote"><em>&ldquo;While others sleep, I sacrifice. While others talk, I work.&rdquo;</em><br>
+    Personal training and transformation coaching from someone who lives it on stage, not just in the gym.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-primary" href="https://wa.me/916309494878?text=Hi%20Akash%2C%20I%20saw%20your%20website%20and%20I%20want%20to%20start%20coaching%20with%20you." target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91A9.87 9.87 0 0 0 12.04 2m0 18.15h-.01a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24a8.2 8.2 0 0 1 8.24 8.25c0 4.54-3.7 8.23-8.25 8.23m4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.22-.08-.39-.12-.55.13-.16.24-.62.8-.76.97-.14.17-.28.19-.53.06-.25-.12-1.05-.38-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.29.37-.43.12-.15.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.13-.55-1.35-.77-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.68.31-.25.25-.94.92-.94 2.23s.97 2.58 1.1 2.76c.14.17 1.9 2.9 4.62 4.07.65.28 1.15.45 1.55.57.65.21 1.24.18 1.71.11.52-.08 1.59-.49 1.99-.97.4-.48.4-.9.4-1.07.02-.17-.06-.31-.31-.43"/></svg>
+        Start on WhatsApp</a>
+      <a class="btn btn-ghost" href="#work">See the work</a>
+    </div>
+  </div>
+</div>
+
+<!-- TICKER -->
+<div class="ticker" aria-hidden="true"><div class="ticker-track" id="tick">
+  <span>Road to Stage</span><i>✦</i><span>No Excuses</span><i>✦</i><span>Competition Prep</span><i>✦</i><span>Discipline Over Motivation</span><i>✦</i><span>Client Transformations</span><i>✦</i><span>Hyderabad</span><i>✦</i>
+</div></div>
+
+<!-- STATS (placeholder numbers, swap with real figures) -->
+<div class="stats">
+  <div class="wrap stats-grid">
+    <div class="stat rv"><div class="num">120<sup>+</sup></div><div class="lbl">Clients transformed</div></div>
+    <div class="stat rv"><div class="num">5<sup>+</sup></div><div class="lbl">Years coaching</div></div>
+    <div class="stat rv"><div class="num">1000<sup>+</sup></div><div class="lbl">Sessions coached</div></div>
+    <div class="stat rv"><div class="num">5.5K</div><div class="lbl">Instagram community</div></div>
+  </div>
+</div>
+
+<!-- ABOUT / THE STANDARD -->
+<section class="about" id="standard">
+  <div class="wrap">
+    <div class="sec-head"><div><p class="eyebrow">01 · The Standard</p></div><span class="sec-num">EST. HYDERABAD</span></div>
+    <div class="about-grid">
+      <figure class="about-img rv">
+        <img src="img/DekJ5zETViP.jpg" alt="Akash Jha in profile under stage lighting during competition prep" loading="lazy">
+        <figcaption>Prep mode · Oct 2026</figcaption>
+      </figure>
+      <div class="rv">
+        <h2>Athlete first.<br>Coach second.</h2>
+        <p>Most trainers coach from a certificate. Akash coaches from the stage. He is a <strong>competing bodybuilding athlete</strong> in peak week for his next show on 25 October, and every program he writes is one he has tested on his own body first.</p>
+        <p>That is why his clients do not get generic plans. They get the same structure, food discipline and accountability that takes him to competition condition, adjusted for their life, their schedule and their starting point.</p>
+        <blockquote>&ldquo;The goal is clear.&rdquo;</blockquote>
+        <div class="cred">
+          <span>Guardian GNC Athlete</span><span>Client Transformations</span><span>Hyderabad + Online</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THE WORK -->
+<section class="work" id="work">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><p class="eyebrow">02 · The Work</p><h2>Proof, not<br>promises.</h2></div>
+      <span class="sec-num">FROM @THECOACHAKASH</span>
+    </div>
+    <div class="gal">
+      <figure class="tall rv"><img src="img/Desd_f3T_0-.jpg" alt="Akash Jha in peak-week condition, mirror check" loading="lazy">
+        <figcaption><span class="q">&ldquo;Every rep, every drop of sweat has a purpose.&rdquo;</span><a href="https://www.instagram.com/p/Desd_f3T_0-/" target="_blank" rel="noopener">View post ↗</a></figcaption></figure>
+      <figure class="tall rv"><img src="img/Da9lBrGzM8o.jpg" alt="Akash Jha training in the gym, full effort" loading="lazy">
+        <figcaption><span class="q">&ldquo;The strong man is not the one who doesn't fall.&rdquo;</span><a href="https://www.instagram.com/p/Da9lBrGzM8o/" target="_blank" rel="noopener">View post ↗</a></figcaption></figure>
+      <figure class="wide rv"><img src="img/DdLVyTVzazb.jpg" alt="Akash Jha mid-training, wide shot" loading="lazy">
+        <figcaption><span class="q">&ldquo;Remember this version. It only gets better.&rdquo;</span><a href="https://www.instagram.com/p/DdLVyTVzazb/" target="_blank" rel="noopener">View post ↗</a></figcaption></figure>
+      <figure class="sq rv"><img src="img/DeWoqxZkz_t.jpg" alt="Akash Jha posing during prep" loading="lazy">
+        <figcaption><span class="q">&ldquo;I'm not here to take part.&rdquo;</span><a href="https://www.instagram.com/p/DeWoqxZkz_t/" target="_blank" rel="noopener">View post ↗</a></figcaption></figure>
+      <figure class="wide rv"><img src="img/DddYzK3TTgs.jpg" alt="Akash Jha in training, focused and alone with the work" loading="lazy">
+        <figcaption><span class="q">&ldquo;No competition with anyone.&rdquo;</span><a href="https://www.instagram.com/p/DddYzK3TTgs/" target="_blank" rel="noopener">View post ↗</a></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+
+<!-- COUNTDOWN / ROAD TO STAGE -->
+<section class="count" id="stage">
+  <div class="wrap">
+    <p class="eyebrow">03 · Road to Stage</p>
+    <h2>Stage day is<br>coming.</h2>
+    <p class="lead">On <strong>25 October</strong>, Akash steps on stage after months of prep. This page counts down with him, and when the show is over, the same page starts booking the clients who watched it happen. <strong>Try doing that with an Instagram bio.</strong></p>
+    <div class="cd" id="cd" aria-label="Countdown to competition day">
+      <div class="cell"><div class="v" id="cd-d">--</div><div class="k">Days</div></div>
+      <div class="cell"><div class="v" id="cd-h">--</div><div class="k">Hours</div></div>
+      <div class="cell"><div class="v" id="cd-m">--</div><div class="k">Minutes</div></div>
+      <div class="cell"><div class="v" id="cd-s">--</div><div class="k">Seconds</div></div>
+    </div>
+    <div id="cd-state"></div>
+    <div class="ctas">
+      <a class="btn btn-primary" href="https://wa.me/916309494878?text=Hi%20Akash%2C%20all%20the%20best%20for%20your%20competition%20on%2025th%20October%21%20Rooting%20for%20you." target="_blank" rel="noopener">Wish him luck</a>
+      <a class="btn btn-ghost" href="https://wa.me/916309494878?text=Hi%20Akash%2C%20I%20want%20to%20start%20coaching%20with%20you%20after%20your%20competition.%20Please%20share%20the%20details." target="_blank" rel="noopener">Book post-show coaching</a>
+    </div>
+  </div>
+</section>
+
+<!-- COACHING -->
+<section id="coaching">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><p class="eyebrow">04 · Coaching</p><h2>Pick your<br>starting point.</h2></div>
+      <span class="sec-num">NO PRICES HERE · ASK ON WHATSAPP</span>
+    </div>
+    <div class="offers">
+      <a class="offer rv" href="https://wa.me/916309494878?text=Hi%20Akash%2C%20I%20am%20interested%20in%201-on-1%20personal%20training.%20Please%20share%20the%20details." target="_blank" rel="noopener">
+        <span class="no">01</span><h3>Personal Training</h3>
+        <p>1-on-1 sessions in Hyderabad. Every workout supervised, every rep counted, form corrected in person.</p>
+        <span class="go">Enquire →</span></a>
+      <a class="offer rv" href="https://wa.me/916309494878?text=Hi%20Akash%2C%20I%20want%20to%20know%20about%20your%20transformation%20coaching." target="_blank" rel="noopener">
+        <span class="no">02</span><h3>Transformation Coaching</h3>
+        <p>His signature work. A full before-to-after program: training, food and weekly check-ins until the mirror changes.</p>
+        <span class="go">Enquire →</span></a>
+      <a class="offer rv" href="https://wa.me/916309494878?text=Hi%20Akash%2C%20I%20am%20interested%20in%20online%20coaching.%20Please%20share%20the%20details." target="_blank" rel="noopener">
+        <span class="no">03</span><h3>Online Coaching</h3>
+        <p>Train from anywhere. Your plan, your check-ins and your corrections, all over WhatsApp and video.</p>
+        <span class="go">Enquire →</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process">
+  <div class="wrap">
+    <p class="eyebrow">05 · How it works</p>
+    <div class="steps">
+      <div class="step rv"><div class="n">STEP 01</div><h3>Say hello</h3><p>One WhatsApp message. Tell Akash where you are starting from.</p></div>
+      <div class="step rv"><div class="n">STEP 02</div><h3>Map the goal</h3><p>A short conversation about your body, schedule, food and target date.</p></div>
+      <div class="step rv"><div class="n">STEP 03</div><h3>Get your plan</h3><p>Training and nutrition built for you. Not a PDF template, a plan that fits your life.</p></div>
+      <div class="step rv"><div class="n">STEP 04</div><h3>Transform</h3><p>Weekly check-ins, corrections and accountability until the result shows.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><p class="eyebrow">06 · Questions</p><h2>Before you ask.</h2></div>
+      <span class="sec-num">FAQ</span>
+    </div>
+    <div class="faq-list">
+      <details><summary>I have never trained before. Can I start?<span class="plus">+</span></summary>
+        <p>Yes. Most transformations start from zero. Your plan is built for your current level and progresses as you do. The only requirement is consistency.</p></details>
+      <details><summary>Where do you train clients?<span class="plus">+</span></summary>
+        <p>Personal training is in person in Hyderabad. If you are outside the city, online coaching covers the same planning and check-ins remotely.</p></details>
+      <details><summary>Does the plan include food and diet?<span class="plus">+</span></summary>
+        <p>Yes. Training alone does not transform anyone. Every coaching plan includes nutrition guidance built around your routine and food preferences.</p></details>
+      <details><summary>How much does coaching cost?<span class="plus">+</span></summary>
+        <p>It depends on the format and your goal, so there are no fixed prices on this page. Message on WhatsApp, describe your goal, and you will get a straight answer.</p></details>
+      <details><summary>How do I start?<span class="plus">+</span></summary>
+        <p>Tap any WhatsApp button on this page and say hello. Akash replies personally, usually the same day.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<div class="final">
+  <img src="img/DdUW8aWTiva.jpg" alt="" aria-hidden="true" loading="lazy">
+  <div class="shade"></div>
+  <div class="wrap">
+    <p class="eyebrow">Your turn</p>
+    <h2>Stop<br>scrolling.<br>Start.</h2>
+    <p>You have seen the work. The next transformation on this page could be yours, and it starts with one message.</p>
+    <a class="btn btn-primary" href="https://wa.me/916309494878?text=Hi%20Akash%2C%20I%20saw%20your%20website%20and%20I%20want%20to%20start%20coaching%20with%20you." target="_blank" rel="noopener">Message Akash on WhatsApp</a>
+  </div>
+</div>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <a class="logo" href="#top">Akash<span>.</span>Jha</a>
+      <div class="links">
+        <a href="https://www.instagram.com/thecoachakash" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://wa.me/916309494878?text=Hi%20Akash%2C%20I%20saw%20your%20website%20and%20I%20want%20to%20start%20coaching%20with%20you." target="_blank" rel="noopener">WhatsApp</a>
+        <a href="#top">Back to top ↑</a>
+      </div>
+    </div>
+    <p class="credit">© 2026 Akash Jha, Hyderabad. Sample website crafted by <a href="https://projectkaro.com" target="_blank" rel="noopener">ProjectKaro</a>.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var hdr=document.getElementById('hdr');
+  addEventListener('scroll',function(){hdr.classList.toggle('scrolled',scrollY>40)},{passive:true});
+  var t=document.getElementById('tick'); t.innerHTML+=t.innerHTML;
+
+  var target = new Date('2026-10-25T09:00:00+05:30').getTime();
+  var cdEl = document.getElementById('cd'), stEl = document.getElementById('cd-state');
+  function pad(n){return (n<10?'0':'')+n}
+  function tick(){
+    var now = Date.now(), diff = target - now;
+    var dayMs = 86400000;
+    if (diff > dayMs) {
+      var d = Math.floor(diff/dayMs), h = Math.floor(diff%dayMs/3600000), m = Math.floor(diff%3600000/60000), s = Math.floor(diff%60000/1000);
+      document.getElementById('cd-d').textContent = pad(d);
+      document.getElementById('cd-h').textContent = pad(h);
+      document.getElementById('cd-m').textContent = pad(m);
+      document.getElementById('cd-s').textContent = pad(s);
+    } else if (diff > -dayMs) {
+      cdEl.style.display = 'none'; stEl.style.display = 'block';
+      stEl.textContent = 'Today is stage day.';
+    } else {
+      cdEl.style.display = 'none'; stEl.style.display = 'block';
+      stEl.textContent = 'The stage is done. Now we build yours.';
+    }
+  }
+  if (cdEl) { tick(); setInterval(tick, 1000); }
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+    document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+  } else { document.querySelectorAll('.rv').forEach(function(el){el.classList.add('in')}); }
+})();
+</script>
+</body>
+</html>
